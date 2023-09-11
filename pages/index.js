@@ -1,9 +1,10 @@
 import React from "react";
+import AppleLurve from "../src/AppleLurve";
 
 const Index = () => {
     return (
         <div>
-            <p>I am an amazing person!</p>
+            <AppleLurve />
         </div>
     )
 }
