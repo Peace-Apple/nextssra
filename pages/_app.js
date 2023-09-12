@@ -1,16 +1,16 @@
-import React from 'react';
-import App, {Container} from 'next/app';
-import {Layout} from "../src/Layout";
+import React from "react";
+import Head from "next/head";
+import Layout from "../src/Layout";
 
-export default class MyApp extends App {
-    render() {
-        const {Component, pageProps} = this.props
-        return (
-            <Container>
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
-            </Container>
-        );
-    }
+export default function MyApp({ Component, pageProps }) {
+    return (
+        <div>
+            <Head>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            </Head>
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </div>
+    )
 }

@@ -6,7 +6,7 @@ import { Header } from "./Header";
 import { Menu } from "./Menu";
 import { Footer } from "./Footer";
 
-export class Layout extends React.Component {
+export default class Layout extends React.Component {
     render() {
         const {children} = this.props
 

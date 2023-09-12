@@ -8,17 +8,17 @@ export class Menu extends Component {
                 <div className="navbar" >
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link href="/" >
+                            <Link href="/" legacyBehavior>
                                 <a className="nav-link">Home</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/speakers" >
+                            <Link href="/speakers" legacyBehavior>
                                 <a className="nav-link">Speakers</a>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/sessions" >
+                            <Link href="/sessions" legacyBehavior>
                                 <a className="nav-link">Sessions</a>
                             </Link>
                         </li>
