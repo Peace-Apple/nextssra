@@ -1,6 +1,7 @@
 import React from "react";
 import DigitalClock from "../src/DigitalClock";
 import axios from 'axios';
+import Link from "next/link";
 
 class Index extends React.Component {
     static async getInitialProps () {
@@ -53,13 +54,18 @@ class Index extends React.Component {
     render() {
         // return <DigitalClock time={this.state.time}></DigitalClock>
         return (
-            <ul>
-                {this.state.speakerData?(this.state.speakerData.map((speaker) =>
-                    <li key={speaker.id}>
-                        {speaker.firstName} {speaker.lastName}
-                    </li>
-                )):''}
-            </ul>
+            <div>
+                <Link href='/sessions' legacyBehavior>
+                <a>SESSIONS</a>
+                </Link>
+                <ul>
+                    {this.state.speakerData?(this.state.speakerData.map((speaker) =>
+                        <li key={speaker.id}>
+                            {speaker.firstName} {speaker.lastName}
+                        </li>
+                    )):''}
+                </ul>
+            </div>
         )
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-
+import Link from "next/link";
 
 class Index extends React.Component {
 
@@ -43,14 +43,18 @@ class Index extends React.Component {
 
     render() {
         return (
-
-            <ul>
-                {this.state.sessionData.map((session) =>
-                    <li key={session.id}>
-                        {session.title} {session.id}
-                    </li>
-                )}
-            </ul>
+            <div>
+                <Link href='/' legacyBehavior>
+                <a>HOME</a>
+                </Link>
+                <ul>
+                    {this.state.sessionData.map((session) =>
+                        <li key={session.id}>
+                            {session.title} {session.id}
+                        </li>
+                    )}
+                </ul>
+            </div>
         )
     }
 
