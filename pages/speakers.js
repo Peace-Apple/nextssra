@@ -3,7 +3,7 @@ import DigitalClock from "../src/DigitalClock";
 import axios from 'axios';
 import Link from "next/link";
 
-class Index extends React.Component {
+class Speakers extends React.Component {
     static async getInitialProps () {
         // return ({
         //     time: new Date().toISOString()
@@ -70,4 +70,4 @@ class Index extends React.Component {
     }
 }
 
-export default Index;
+export default Speakers;
