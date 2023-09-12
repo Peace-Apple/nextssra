@@ -1,12 +1,36 @@
 import React from "react";
 import AppleLurve from "../src/AppleLurve";
+import DigitalClock from "../src/DigitalClock";
 
-const Index = () => {
-    return (
-        <div>
-            <AppleLurve />
-        </div>
-    )
+class Index extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            time: new Date().toLocaleString()
+        }
+    }
+
+    tick() {
+        this.setState(() => {
+            return ({
+                time: new Date().toLocaleString()
+            });
+        });
+    }
+
+    componentDidMount() {
+        this.interval = setInterval(() => this.tick(), 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+
+    render() {
+        return <DigitalClock time={this.state.time}></DigitalClock>
+    }
 }
 
 export default Index;
