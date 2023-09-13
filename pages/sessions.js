@@ -55,11 +55,11 @@ class Sessions extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="card-deck">
-                        {this.state.sessionData.map((session) =>
+                        {this.state.sessionData?(this.state.sessionData.map((session) =>
                             <div className="card col-4 cardmin margintopbottom" key={session.id}>
                                 <SessionCard session={session}/>
                             </div>
-                        )}
+                        )):''}
                     </div>
                 </div>
             </div>

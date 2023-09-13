@@ -57,11 +57,11 @@ class Speakers extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="card-deck">
-                        {this.state.speakerData.map((speaker) =>
+                        {this.state.speakerData?(this.state.speakerData.map((speaker) =>
                             <div className="card col-4 cardmin margintopbottom20" key={speaker.id}>
                                 <SpeakerCard speaker={speaker}/>
                             </div>
-                        )}
+                        )):''}
                     </div>
                 </div>
             </div>
